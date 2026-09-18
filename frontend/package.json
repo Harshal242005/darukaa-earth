@@ -4,6 +4,8 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "format:check": "prettier --check \"src/**/*.{js,jsx,css}\"",
+"format": "prettier --write \"src/**/*.{js,jsx,css}\"",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
