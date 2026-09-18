@@ -1,6 +1,7 @@
 [tool.ruff]
 line-length = 90
 target-version = "py311"
+extend-exclude = ["alembic"]
 
 [tool.ruff.lint]
 select = ["E", "F", "I", "B", "UP", "N", "SIM"]
