@@ -2,7 +2,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from app.config import settings
-from app.routers import auth
+from app.routers import analytics, auth, projects, sites
 
 app = FastAPI(
     title="Darukaa.Earth API",
@@ -19,6 +19,9 @@ app.add_middleware(
 )
 
 app.include_router(auth.router)
+app.include_router(projects.router)
+app.include_router(sites.router)
+app.include_router(analytics.router)
 
 
 @app.get("/health", tags=["meta"])
