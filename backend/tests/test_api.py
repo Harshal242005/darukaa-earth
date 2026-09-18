@@ -39,9 +39,7 @@ def test_register_login_me(client, run_id):
     assert r.status_code == 200
     token = r.json()["access_token"]
 
-    r = client.get(
-        "/api/auth/me", headers={"Authorization": f"Bearer {token}"}
-    )
+    r = client.get("/api/auth/me", headers={"Authorization": f"Bearer {token}"})
     assert r.status_code == 200
     assert r.json()["email"] == email
 
