@@ -1,0 +1,24 @@
+{
+  "name": "darukaa-earth",
+  "private": true,
+  "scripts": {
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "frontend/**/*.{js,jsx,ts,tsx}": [
+      "prettier --write"
+    ],
+    "**/*.{json,css,md,yml,yaml}": [
+      "prettier --write"
+    ],
+    "backend/**/*.py": [
+      "py -3.12 -m ruff format",
+      "py -3.12 -m ruff check --fix"
+    ]
+  },
+  "devDependencies": {
+    "husky": "^9.1.7",
+    "lint-staged": "^15.2.10",
+    "prettier": "^3.3.3"
+  }
+}
