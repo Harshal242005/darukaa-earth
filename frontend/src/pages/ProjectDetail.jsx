@@ -138,10 +138,9 @@ export default function ProjectDetail() {
               <div className="grid grid-cols-2 gap-3">
                 <StatCard
                   label="Total carbon"
-                  value={analytics.total_carbon_tco2e.toLocaleString(
-                    undefined,
-                    { maximumFractionDigits: 0 }
-                  )}
+                  value={analytics.total_carbon_tco2e.toLocaleString(undefined, {
+                    maximumFractionDigits: 0,
+                  })}
                   unit="tCO2e"
                 />
                 <StatCard
@@ -157,18 +156,14 @@ export default function ProjectDetail() {
                 <StatCard
                   label="Trend"
                   value={`${analytics.carbon_trend_pct > 0 ? '+' : ''}${analytics.carbon_trend_pct}%`}
-                  accent={
-                    analytics.carbon_trend_pct >= 0 ? 'emerald' : 'amber'
-                  }
+                  accent={analytics.carbon_trend_pct >= 0 ? 'emerald' : 'amber'}
                 />
               </div>
 
               <SiteCharts analytics={analytics} />
             </div>
           ) : loadingAnalytics ? (
-            <div className="p-6 text-sm text-slate-500">
-              Loading analytics…
-            </div>
+            <div className="p-6 text-sm text-slate-500">Loading analytics…</div>
           ) : (
             <div className="p-4">
               <h2 className="text-sm font-semibold text-slate-700 uppercase tracking-wide">
@@ -176,8 +171,8 @@ export default function ProjectDetail() {
               </h2>
               {sites.length === 0 ? (
                 <p className="text-sm text-slate-500 mt-3">
-                  No sites yet. Click <strong>+ Add Site</strong> and draw a
-                  polygon on the map.
+                  No sites yet. Click <strong>+ Add Site</strong> and draw a polygon on
+                  the map.
                 </p>
               ) : (
                 <ul className="mt-3 space-y-2">
@@ -191,9 +186,7 @@ export default function ProjectDetail() {
                             : 'border-slate-200 bg-white hover:border-slate-300'
                         }`}
                       >
-                        <div className="font-medium text-sm text-slate-900">
-                          {s.name}
-                        </div>
+                        <div className="font-medium text-sm text-slate-900">{s.name}</div>
                         <div className="text-xs text-slate-500 mt-0.5">
                           {s.area_hectares?.toLocaleString(undefined, {
                             maximumFractionDigits: 0,

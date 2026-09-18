@@ -12,8 +12,7 @@ const base = {
 };
 
 export default function SiteCharts({ analytics }) {
-  const ts = (key) =>
-    analytics.series.map((p) => [Date.parse(p.recorded_at), p[key]]);
+  const ts = (key) => analytics.series.map((p) => [Date.parse(p.recorded_at), p[key]]);
 
   const carbon = {
     ...base,

@@ -7,9 +7,7 @@ export default function StatCard({ label, value, unit, accent = 'emerald' }) {
   };
   return (
     <div className="bg-white rounded-xl border border-slate-200 p-4">
-      <div className="text-xs uppercase tracking-wide text-slate-500">
-        {label}
-      </div>
+      <div className="text-xs uppercase tracking-wide text-slate-500">{label}</div>
       <div className={`mt-1 text-2xl font-semibold ${accents[accent]}`}>
         {value}
         {unit && <span className="text-sm ml-1 text-slate-400">{unit}</span>}

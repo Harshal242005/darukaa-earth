@@ -44,9 +44,7 @@ export default function NewProjectModal({ onClose, onCreated }) {
 
         <form onSubmit={submit} className="mt-5 space-y-4">
           <div>
-            <label className="block text-sm font-medium text-slate-700">
-              Name
-            </label>
+            <label className="block text-sm font-medium text-slate-700">Name</label>
             <input
               type="text"
               value={name}
@@ -68,9 +66,7 @@ export default function NewProjectModal({ onClose, onCreated }) {
             />
           </div>
           <div>
-            <label className="block text-sm font-medium text-slate-700">
-              Type
-            </label>
+            <label className="block text-sm font-medium text-slate-700">Type</label>
             <div className="mt-2 grid grid-cols-3 gap-2">
               {TYPES.map((t) => (
                 <button

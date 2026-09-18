@@ -33,18 +33,14 @@ export default function Register() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-slate-50 px-4">
       <div className="w-full max-w-md bg-white rounded-2xl shadow-lg p-8">
-        <h1 className="text-2xl font-bold text-slate-900">
-          Create your account
-        </h1>
+        <h1 className="text-2xl font-bold text-slate-900">Create your account</h1>
         <p className="text-slate-500 mt-1 text-sm">
           Start mapping carbon and biodiversity projects
         </p>
 
         <form onSubmit={onSubmit} className="mt-6 space-y-4">
           <div>
-            <label className="block text-sm font-medium text-slate-700">
-              Full name
-            </label>
+            <label className="block text-sm font-medium text-slate-700">Full name</label>
             <input
               type="text"
               value={fullName}
@@ -53,9 +49,7 @@ export default function Register() {
             />
           </div>
           <div>
-            <label className="block text-sm font-medium text-slate-700">
-              Email
-            </label>
+            <label className="block text-sm font-medium text-slate-700">Email</label>
             <input
               type="email"
               value={email}
@@ -65,9 +59,7 @@ export default function Register() {
             />
           </div>
           <div>
-            <label className="block text-sm font-medium text-slate-700">
-              Password
-            </label>
+            <label className="block text-sm font-medium text-slate-700">Password</label>
             <input
               type="password"
               value={password}

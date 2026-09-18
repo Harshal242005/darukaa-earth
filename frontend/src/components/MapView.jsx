@@ -124,9 +124,7 @@ export default function MapView({
 
     if (features.length) {
       const bounds = new mapboxgl.LngLatBounds();
-      features.forEach((f) =>
-        f.geometry.coordinates[0].forEach((c) => bounds.extend(c))
-      );
+      features.forEach((f) => f.geometry.coordinates[0].forEach((c) => bounds.extend(c)));
       const el = map.getContainer();
       if (el.offsetWidth > 0 && el.offsetHeight > 0) {
         try {

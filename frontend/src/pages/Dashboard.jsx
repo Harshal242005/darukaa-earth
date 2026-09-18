@@ -28,10 +28,7 @@ export default function Dashboard() {
     load();
   }, []);
 
-  const totalHectares = projects.reduce(
-    (sum, p) => sum + (p.total_hectares || 0),
-    0
-  );
+  const totalHectares = projects.reduce((sum, p) => sum + (p.total_hectares || 0), 0);
   const totalSites = projects.reduce((sum, p) => sum + (p.site_count || 0), 0);
 
   return (
@@ -111,9 +108,7 @@ export default function Dashboard() {
               >
                 <div className="flex items-start justify-between">
                   <div className="flex-1 min-w-0">
-                    <div className="font-semibold text-slate-900 truncate">
-                      {p.name}
-                    </div>
+                    <div className="font-semibold text-slate-900 truncate">{p.name}</div>
                     <div className="text-xs uppercase tracking-wide text-slate-400 mt-1">
                       {p.project_type}
                     </div>
